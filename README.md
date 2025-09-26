@@ -94,3 +94,52 @@ src/
  └── index.ts             # App entrypoint
 ```
 
+## API Documentation
+### Create User
+```yml
+POST http://localhost:3000/api/v1/users
+```
+
+#### Request Body
+```json
+{
+    "name": "Hello1",
+    "email": "hello1@gmail.com",
+    "password": "123456789"
+}
+```
+
+#### Response Data
+```json
+{
+    "data": {
+        "id": "18555c23-f749-4862-b90b-9421189b8c1b",
+        "name": "Hello1",
+        "email": "hello1@gmail.com",
+        "password": "123456789",
+        "createdAt": "2025-09-26T20:30:33.801Z"
+    }
+}
+```
+
+### Get User by ID
+#### GET /api/v1/users?userId=<USER_ID>
+
+#### Example Request
+```yml
+GET http://localhost:3000/api/v1/users?userId=41a4815e-3510-4993-99f7-0e4e57c59c3b
+```
+
+#### Response Data
+```json
+{
+    "data": {
+        "id": "41a4815e-3510-4993-99f7-0e4e57c59c3b",
+        "name": "Hello",
+        "email": "hello@gmail.com",
+        "password": "123456789",
+        "createdAt": "2025-09-26T20:16:44.927Z"
+    }
+}
+
+```
